@@ -1,0 +1,21 @@
+<!--pages/history/history.wxml-->
+<view class="historybox">
+  <!-- 背景图片 -->
+  <image class="backimg" src="{{imgurl}}/history.jpg" ></image>
+  <view class="iconfont icon-fanhui1" bindtap="backpage"><text class="title">历史听歌</text></view>
+  <!-- 历史听歌记录盒子 -->
+  <view class="historysongbox">
+    <!-- 历史听歌单曲 -->
+    <view class="historysongitem" wx:for="{{history}}" wx:key="songid" data-songid="{{item.songid}}" bindtap="tosong">
+        <!-- 播放图标 -->
+        <view class="iconfont icon-zhengzaibofang"></view>
+        <!-- 歌曲信息 -->
+        <view class="songinfo" >
+          <view class="songname">{{item.songname}}</view>
+          <view class="singer">{{item.singer}}</view>
+        </view>
+        <!-- 收藏时间 -->
+        <view class="time">{{item.time}}</view>
+    </view>
+  </view>
+</view>

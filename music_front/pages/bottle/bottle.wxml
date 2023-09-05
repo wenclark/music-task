@@ -1,0 +1,75 @@
+<!--pages/bottle/bottle.wxml-->
+<view>
+  <view class="text">随心听树洞区，写下你的心里话，等待有缘人的回复吧！</view>
+  <image class="backimage" src="{{imgurl}}/sea.png"></image>
+  <image class="sunimage" src="{{imgurl}}/sun.png"></image>
+  <!-- 扔一扔 -->
+  <view class="throw">
+    <image src="{{imgurl}}/b5.png" bindtap="showpage"></image>
+    <text>扔一个</text>
+  </view>
+  <!-- 执行扔瓶子动画 -->
+  <view class="throwbottle {{throwai&&'diskAnimation'}}">
+    <image src="{{imgurl}}/b5.png"></image>
+  </view>
+  <!-- 捞一捞-->
+  <view class="net" bindtap="netbottle">
+    <image src="{{imgurl}}/wang.png"></image>
+    <text>捞一捞</text>
+  </view>
+  <!-- 执行捞瓶子动画 -->
+  <view class="netbottle {{net&&'disnetAnimation'}} ">
+    <image src="{{imgurl}}/wang.png"></image>
+  </view>
+  <!-- 动态捞出瓶子 -->
+  <view class="nettdbottle {{nettd&&'disnettdAnimation'}} ">
+    <image src="{{netb[bottleindex].img}}"></image>
+  </view>
+  <!-- 瓶子内容 -->
+  <view class="bottletext" hidden="{{texthid}}">
+    捞出来了一个<text style="color: coral;">{{netb[bottleindex].type}}</text>
+    请去我的瓶子里查看内容噢
+  </view>
+  <!-- 我的瓶子 -->
+  <view class="mybottle" bindtap="mybottle">
+    <image src="{{imgurl}}/b7.png"></image>
+    <text>我的瓶子</text>
+  </view>
+</view>
+<!-- 扔瓶子页面 -->
+<view class="throwpage" hidden="{{hid}}">
+  <textarea class="throwtext" maxlength="-1" placeholder="请输入内容，将它投入大海吧!" value="{{text}}" bindinput="gettext" />
+  <view class="choosetype">
+    <view class="{{item.checked?'chooseselect':'choosecontent'}}'" wx:for="{{list}}" wx:key="index" data-id="{{index}}" data-type="{{item.name}}" bindtap="gettype">
+      <image class="chooseimage" src="{{item.img}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <button style="width:150rpx;height:60rpx;font-size:30rpx;left: -180rpx;top:430rpx;" bindtap="throwbottle">投掷</button>
+  <button style="width:150rpx;height:60rpx;font-size: 30rpx;left:180rpx;top:372rpx;" bindtap="closepage">取消</button>
+</view>
+<!-- 我的瓶子整体页面 -->
+<view class="mybottleBox" hidden="{{!showmyBox}}">
+  <!-- 我的扔瓶子页面 -->
+  <view class="mybottlepage" hidden="{{mybottonpage}}">
+    <button class="mybutton" bindtap="showmybpage">我的瓶子</button>
+    <button class="netbutton" bindtap="netmybpage">已捞到的瓶子</button>
+    <view class="pagestyle" wx:for="{{mybottle}}" data-index="{{index}}" bindtap="tocomment">
+      <text class="tagtype">{{item.type}}</text>
+      <view class="content">{{item.content}}</view>
+      <text class="time">{{item.sendtime}}</text>
+    </view>
+    <view class="closebottlepage" bindtap="closemypage">关闭</view>
+  </view>
+  <!-- 已捞到的瓶子页面 -->
+  <view class="netbottlepage" hidden="{{netbottonpage}}">
+    <button class="mybutton" bindtap="showmybpage">我的瓶子</button>
+    <button class="netbutton" bindtap="netmybpage">已捞到的瓶子</button>
+    <view class="pagestyle" wx:for="{{bottlelist}}" data-index="{{index}}" data-bid="{{item.bottleid}}" bindlongpress="pushbottle" bindtap="tocomment">
+      <text class="tagtype">{{item.type}}</text>
+      <view class="username">{{item.user}}</view>
+      <view class="content">{{item.content}}</view>
+    </view>
+    <view class="closebottlepage" bindtap="closemypage">关闭</view>
+  </view>
+</view>

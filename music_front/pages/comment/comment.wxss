@@ -1,0 +1,168 @@
+/* pages/comment/comment.wxss */
+page{
+  height: 100%;
+}
+.head{
+  height: 30%;
+  width: 100%;
+  border-radius: 100% 100% 100% 100% / 0% 0% 10% 10%;
+  box-shadow: 0 0 100rpx 50rpx rgba(15, 15, 15, 0.3);
+}
+.head_mask{
+  height: 100%;
+  width: 100%;
+  background: rgba(219, 219, 219, 0.1);
+  backdrop-filter: blur(8px);
+}
+.comment_con{
+  position:absolute;
+  height: 70%;
+  width: 100%;
+  box-shadow: 10 10 120rpx 150rpx rgba(15, 15, 15, 0.3);
+  padding-top: 100rpx;
+  z-index: 3;
+}
+.songinfo{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  position: absolute;
+  top: 80rpx;
+}
+.musicinfo{
+  color: whitesmoke;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+.commenttitle{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: 600;
+  margin-top: 70rpx;
+  background-color: white;
+}
+.comments{
+  height: 850rpx;
+  width: 100%;
+  overflow:auto;
+  margin-top: 30rpx;
+}
+.comment{
+  position: relative;
+  height: 200rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.comment_user{
+  display: flex;
+  height: 60rpx;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  color: rgb(108, 109, 109);
+}
+.avator{
+  height: 80rpx;
+  width: 80rpx;
+  background-color: rgb(226, 226, 225);
+  border-radius: 30%;
+  margin-right: 30rpx;
+  overflow: hidden;
+}
+.avator image{
+  height: 100%;
+  width: 100%;
+}
+.commenttime{
+  position: absolute;
+  font-size: 25rpx;
+  color: #928e8e;
+  right: 20rpx;
+}
+.comment_body{
+  height: 100rpx;
+  margin-left: 100rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-family:monospace;
+  border-bottom: 0.5px solid rgb(207, 198, 198);
+}
+.commentbutton{
+  display: flex;
+  justify-content: space-around;
+  height: 120rpx;
+  width: 100%;
+  /* border-top: 1px solid rgb(207, 204, 204); */
+}
+.writebox{
+  width: 70%;
+  height: 60%;
+  margin-top: 20rpx;
+  background-color: azure;
+  border-radius: 20px;
+}
+.writecomment{
+  width: 80%;
+  height: 60%;
+  margin-top: 20rpx;
+  background-color: azure;
+  border-radius: 20px;
+  padding: 5rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.submit{
+  width: 100rpx;
+  height: 100rpx;
+  line-height:100rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  background-color: azure;
+  border-radius: 100%;
+}
+.lightdisk{
+  position: absolute;
+  height: 40%;
+  width: 400rpx;
+  left: 22%;
+  top:12%;
+}
+.disk{
+  position: absolute;
+  height:45%;
+  width: 100%;
+  font-size:400rpx;
+  z-index: 0;
+}
+.musicimg{
+  position: absolute;
+  height: 220rpx;
+  width: 220rpx;
+  border-radius: 100%;
+  top: 90rpx;
+  left:90rpx;
+}
+.title{
+  position: absolute;
+  height: 80rpx;
+  width: auto;
+  top:70rpx;
+  left: 20rpx;
+  color: #9c9797ea;
+}
+.deletbutton{
+  position: absolute;
+  top: 80%;
+  right: 20rpx;
+  color: rgb(126, 121, 121);
+  font-size: 28rpx;
+}
+.pressBox{
+  position: absolute;
+  height: 50rpx;
+  width: 100rpx;
+  background-color: thistle;
+  top: 20rpx;
+  left: 40%;
+}

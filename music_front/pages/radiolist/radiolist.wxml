@@ -1,0 +1,20 @@
+<!--pages/radiolist/radiolist.wxml-->
+<view class="back">
+  <!-- 歌曲列表 -->
+  <!-- style="background-image: url({{videos.data.programs[0].coverUrl}}); background-size:100% 100%;" -->
+<view class="back1" style="background-image: url({{videos.data.programs[0].coverUrl}}); background-size:100% 100%;">
+   <view class="listContanier" >
+    <view class="listhead">
+      <text>播放全部</text>
+    </view>
+    <scroll-view scroll-y="true" class="listsongs">
+        <view class="songs" wx:for="{{videos.data.programs}}" wx:key="id" data-song="{{item}}" data-index='{{index}}'  bindtap="toradiodetail"> 
+        <image src="{{item.coverUrl}}"></image>
+        <view class="detailBox">
+          <text class="textt">{{item.name}}</text>
+        </view>
+      </view> 
+    </scroll-view>
+  </view>  
+</view>
+</view>

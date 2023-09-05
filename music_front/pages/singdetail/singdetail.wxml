@@ -1,0 +1,60 @@
+<!--pages/singdtail/singdetail.wxml-->
+<!--pages/singdtail/singdetail.wxml-->
+<view class="singbody" style="background-image: url({{songinfo.al.picUrl}}); background-size:100% 100%;">
+  <view class="singdetail">
+    <view class="iconfont icon-fanhui1" bindtap="backpage"></view>
+    <!-- 歌名及作者 -->
+    <view class="back" style="background-image: url({{songinfo.al.picUrl}}); background-size:100% 100%; visibility:{{showlrc?'hidden':'visible'}}"></view>
+    <view class="title">{{songinfo.name}}</view>
+    <view class="author">{{songinfo.ar[0].name}}</view>
+    <view class="circle" hidden="{{showlrc}}"></view>
+
+    <!-- 指针与磁盘 -->
+    <view class="box1" bindtap="showLrc" hidden="{{showlrc}}">
+      <!-- 指针 -->
+      <view class="needles">
+        <view class="needle  iconfont icon-yinfu {{isPlay?'needleRotate':''}}"></view>
+      </view>
+      <!-- 磁盘 -->
+      <view class="lightdisk {{isPlay&&'diskAnimation'}}">
+        <image class="disk iconfont icon-guangpan"></image>
+        <image class="musicimg" src="{{songinfo.al.picUrl}}"></image>
+      </view>
+      <!-- 点赞与评论 -->
+      <view class="likebtn iconfont icon-xindong {{iscollect&&'collectAnimation'}}" catchtap="collectsong"></view>
+      <view class='commentbtn iconfont icon-pinglun' catchtap="tocomment"></view>
+    </view>
+
+
+    <!-- 歌词 -->
+    <view class="box2" style="visibility:{{showlrc?'visible':'hidden'}}" bindtap="showLigthdisk">
+      <scroll-view id="lrcscroll" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation>
+        <view wx:for="{{lrcword}}" wx:key="index" class="songlrc {{lrclocation===index?'actived-word':''}}" catchtap="LrcControlmusic" data-location="{{index}}">{{item?item:" "}}</view>
+      </scroll-view>
+    </view>
+
+    <!-- 控制区域 -->
+    <view class="back1">
+      <!-- 进度栏 -->
+      <view class="progressbox">
+        <view class="time">{{curtime}}</view>
+        <slider class="progress" block-size="12" activeColor="#e9e9e9" color="#888888" value="{{progress}}" bindchange="changeProgress"></slider>
+        <view class="time">{{alltime}}</view>
+      </view>
+      <!-- 底部栏 -->
+      <view class="buttonlist">
+        <view class="left">
+          <view class="iconfont icon-xunhuanbofang" bindtap="looprun" hidden="{{allrun}}"></view>
+          <view class="iconfont icon-danquxunhuan" bindtap="notloop" hidden="{{!allrun}}"></view>
+        </view>
+        <view class="iconfont icon-shangyiqu101" data-switch='pre' bindtap="switchsong"></view>
+        <view class="center">
+          <view class="iconfont icon-bofang" style="font-size: 100rpx; " hidden="{{isPlay}}" bindtap="startmusic"></view>
+          <view class="iconfont icon-zanting" style="font-size: 90rpx;" bindtap="stopmusic" hidden="{{!isPlay}}"></view>
+        </view>
+        <view class="iconfont icon-xiayiqu101" data-switch='next' bindtap="switchsong"></view>
+        <view class="iconfont icon-playlistMusic4"></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,138 @@
+/* pages/heart/heart.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.hearthead{
+  position: relative;
+  height: 35%;
+  width: 100%;
+  background-image: linear-gradient(rgba(18, 17, 19, 0.849),transparent);
+}
+.hearttitle{
+  position: absolute;
+  top: 120rpx;
+  left: 46%;
+  color: #ecd5e2;
+  font-size: 40rpx;
+  font-family:monospace
+}
+.headimg{
+  position: absolute;
+  width: 200rpx;
+  height: 200rpx;
+  top: 100rpx;
+  left: 50rpx;
+}
+.headimg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50rpx;
+  box-shadow: 10rpx 10rpx 40rpx black;
+}
+.icon-fanhui1{
+  position: absolute;
+  font-size: 50rpx;
+  top: 50rpx;
+  left: 20rpx;
+  color: rgb(43, 42, 42);
+}
+
+@keyframes heartbeat {
+  0%,100%{font-size:550rpx;}
+   50% {font-size: 600rpx;}
+ }
+.title{
+  position: absolute;
+  top: 320rpx;
+  left: 40rpx;
+  font-size:40rpx ;
+  font-family:cursive; 
+  color: rgba(22, 21, 21, 0.822);
+}
+.likesongbox{
+  position: relative;
+  top: -5%;
+  height: 70%;
+  width: 100%;
+  background-color:#915a79 ;
+  opacity: 0.8;
+  border-radius: 40rpx 40rpx 0 0;
+  box-shadow: 20rpx 20rpx 100rpx rgb(231, 117, 203);
+}
+.songcontent{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.songbackground{
+  position: fixed;
+  top: 450rpx;
+  left: 15%;
+  font-size: 600rpx;
+  z-index: 1;
+  color: #a04261;
+  text-shadow: 20rpx 20rpx 40rpx black;
+  animation:heartbeat 1.5s infinite linear ;
+}
+.startbtn{
+  position: fixed;
+  width: 100%;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+  padding-left: 40rpx;
+  line-height: 80rpx;
+  color: aliceblue;
+}
+.songs{
+  position: relative;
+  width: 100%;
+  height: 800rpx;
+  top: 100rpx;
+  overflow: auto;
+}
+.statrtitle{
+  position: absolute;
+  
+}
+.icon-bofang2{
+  font-size: 50rpx;
+  margin-right: 30rpx;
+}
+.songitem{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 90%;
+  height: 80rpx;
+  margin-bottom: 50rpx;
+  color: rgb(218, 190, 190);
+}
+.songinfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+}
+.songname{
+  color: whitesmoke;
+  margin-right: 20rpx;
+}
+.singer{
+ font-size: 25rpx;
+ color: rgb(218, 190, 190);
+}
+.icon-gengduo-shuxiang{
+  position: absolute;
+  right: 30rpx;
+}
+.icon-bofangyinle{
+  position: absolute;
+  right: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+}
+.aixinselect{
+  color: red;
+  line-height: 50rpx;
+}

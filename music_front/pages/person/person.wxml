@@ -1,0 +1,81 @@
+<!--pages/person/person.wxml-->
+<view class="personalpage">
+  <!-- 个人中心背景图片 -->
+  <image class="personalimage" src="{{imgurl}}/pimg.jpg"></image>
+  <!-- 用户中心主体 -->
+  <view class="user_body" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="transform:{{transformY}};transition:{{transtyle}};">
+    <view class="avatorBox" bindtap="setAavator">
+      <image class="avator" src="{{avator}}"></image>
+    </view>
+    <view class="loginBox">
+      <button class="loginButton" bindtap="showUserbox">{{user}}</button>
+    </view>
+    <!-- 菜单 -->
+    <view class="menuBox">
+      <view class="menuitem">
+        <icon class="iconfont icon-shouye"></icon>
+        <text>个人消息</text>
+      </view>
+      <view class="menuitem">
+        <icon class="iconfont icon-bofang3"></icon>
+        <text>最近播放</text>
+      </view>
+      <view class="menuitem">
+        <icon class="iconfont icon-xiazai"></icon>
+        <text>本地/下载</text>
+      </view>
+      <view class="menuitem">
+        <icon class="iconfont icon-zhuye"></icon>
+        <text>个人主页</text>
+      </view>
+    </view>
+
+    <!-- 菜单2 -->
+    <view class="menuBox2">
+      <view class="list" bindtap='heartsong'>
+        心动歌曲
+        <text>></text>
+      </view>
+      <view class="list"  bindtap='showhistory'>
+        历史记录
+        <text>></text>
+      </view>
+      <view class="list" bindtap="exit">
+        退出登录
+        <text>></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 登录注册页面 -->
+  <view class="enter" hidden="{{hid}}">
+    <!-- 登陆页面 -->
+    <view class="enter-login" hidden="{{login_hid}}">
+      <text class="text-login">Login</text>
+      <image class="close_icon" src="{{imgurl}}/close.png" catchtap="closelogin"></image>
+      <image class="user_icon" src="{{imgurl}}/user.png"></image>
+      <input class="user" value="{{username}}" placeholder="请输入账户名" bindinput="getUser" />
+      <image class="password_icon" src="{{imgurl}}/psw.png"></image>
+      <input class="password" type="password" value="{{password}}" placeholder="请输入密码" bindinput="getpsw" />
+      <view class="login" plain="true" style="width:500rpx;height:80rpx;" bindtap="Login">登录</view>
+      <view class="toregist" style="width:200rpx;height:90rpx;left: 200rpx;" bindtap="showRegist">转到注册</view>
+    </view>
+    <!-- 注册页面 -->
+    <view class="enter-regist" hidden="{{regist_hid}}">
+      <text class="text-close">Regist</text>
+      <image class="close_icon" src="{{imgurl}}/close.png" catchtap="closelogin"></image>
+      <image class="user_icon" src="{{imgurl}}/user.png"></image>
+      <input class="user" bindinput="getUser" value="{{username}}" placeholder="请输入账户名" bindinput="getUser" />
+      <image class="password_icon" src="{{imgurl}}/psw.png"></image>
+      <input class="password" type="password" value="{{psw}}" placeholder="请输入密码" bindinput="getpsw" />
+      <view class="regist" plain="true" style="width:500rpx;height:80rpx;right:140rpx;" bindtap="Regist">注册</view>
+      <view class="tologin" style="width:200rpx;height:90rpx;left: 200rpx;" bindtap="showLogin">转到登陆</view>
+    </view>
+  </view>
+  <!-- 用户中心背景 -->
+  <view class="user_background">
+    <image src="{{imgurl}}/backimg.pimg.jpg"></image>
+  </view>
+
+
+</view>

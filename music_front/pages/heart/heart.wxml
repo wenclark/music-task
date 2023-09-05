@@ -1,0 +1,33 @@
+<!--pages/heart/heart.wxml-->
+<!-- 收藏歌曲头部 -->
+<view class="hearthead">
+  <view class="iconfont icon-fanhui1" bindtap="backpage"></view>
+  <text class="hearttitle">欢迎来到心动模式</text>
+  <view class="headimg">
+    <image src="{{imgurl}}/backimg.png"></image>
+  </view>
+  <text class="title">我的心动歌曲</text>
+</view>
+
+<!-- 歌单 -->
+<view class="likesongbox">
+  <!-- 爱心图片 -->
+  <text class="iconfont icon-aixin1 songbackground"></text>
+  <!-- 歌单列表 -->
+  <view class="songcontent">
+    <view class="startbtn"><text class="iconfont icon-bofang2" bindtap="toheartsong" data-songid="{{heart[0].songid}}" data-songindex="0"></text><text class="statrtitle">进入心动模式</text></view>
+    <!-- 心动单曲 -->
+    <view class="songs" >
+      <view class="songitem" wx:for="{{heart}}" wx:key="id" data-songid="{{item.songid}}" data-songindex="{{index}}"  bindtap="toheartsong">
+      <text style="line-height: 80rpx;">{{index+1}}</text>
+      <view class="songinfo">
+        <view class="songname">{{item.songname}}</view>
+        <view class="singer">{{item.singer}}</view>
+      </view>
+      <view class="iconfont icon-aixin {{iscollect?'aixinselect':''}}"></view>
+      <view class="iconfont icon-bofangyinle"></view>
+      <view class="iconfont icon-gengduo-shuxiang" style="line-height: 80rpx;"></view>
+    </view>
+    </view>
+  </view> 
+</view>

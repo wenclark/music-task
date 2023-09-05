@@ -1,0 +1,40 @@
+<!--pages/comment/comment.wxml-->
+<!-- 头部 -->
+<view class="head" style="background-image: url({{songinfo.al.picUrl}}); background-size:100% 100%;">
+  <view class="head_mask">
+    <!-- 歌曲信息 -->
+    <view class="songinfo">
+      <view class="musicinfo">{{songinfo.al.name}}</view>
+      <view class="musicinfo">--{{songinfo.ar[0].name}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 磁盘和歌曲图片 -->
+<view class="lightdisk">
+  <image class="disk iconfont icon-guangpan"></image>
+  <image class="musicimg" src="{{songinfo.al.picUrl}}"></image>
+</view>
+
+<!-- 评论及评论栏 -->
+<view class="comment_con">
+  <!-- 标题 -->
+  <view class="title">分享你的idea~</view>
+  <!-- 评论内容 -->
+  <view class="comments">
+    <view class="comment" wx:for="{{commentinfo}}" wx:key="id" data-pos="{{index}}" bindlongpress="showpressbox">
+      <view class="comment_user">
+        <view class="avator"><image src="{{item.pic}}"></image></view>
+        <view class="username">{{item.username}}</view>
+        <view class="commenttime">{{comment_time[index]}}</view>
+      </view>
+      <view class="comment_body">{{item.comment}}</view>
+      <!-- <view class="pressBox" ></view> -->
+    </view>
+  </view>
+  <!-- 发送评论栏 -->
+  <view class="commentbutton">
+    <view class="writebox"><input type="text" value="{{subcomment}}" class="writecomment" bindinput="inputComment" /></view>
+    <view class="submit" bindtap="sendComment">评论</view>
+  </view>
+</view>

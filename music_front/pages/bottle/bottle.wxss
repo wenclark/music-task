@@ -1,0 +1,429 @@
+/* pages/bottle/bottle.wxss */
+.page
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.backimage
+{
+  position:fixed;
+  top: 0;
+  left: 0;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    z-index:-2;
+}
+/* 太阳动画 */
+.sunimage
+{
+  position:fixed;
+  top: 4%;
+  left: 3%;
+  width: 35%;
+  height: 22%;
+  z-index: 0;
+  animation: sunani 20s  infinite linear;
+}
+@keyframes sunani {
+  from {transform: rotate(0)}
+  to {transform: rotate(360deg)}
+}
+.text
+{
+  top: 20rpx;
+  position:fixed;
+  left: 30%;
+  font-size: 40rpx;
+  font-family: 宋体;
+  color:rgba(39, 37, 4, 0.849) ;
+}
+/* 扔一个 */
+.throw
+{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  bottom: 100rpx;
+  left: -5%;
+  text-align: center;
+  z-index: 1;
+}
+.throw image
+{
+  position: flex;
+  width: 300rpx;
+  height: 300rpx;
+  animation: throwani 1s  infinite linear;
+}
+@keyframes throwani {
+ 0%,100%{transform: rotate(0deg)}
+ 25% {transform: rotate(-10deg)}
+  50% {transform: rotate(0deg)}
+  75% {transform: rotate(10deg)}
+}
+.throw text{
+  position: relative;
+  top: -50rpx;
+  color:rgba(39, 37, 4, 0.849) ;
+}
+/* 捞一个 */
+.net
+{
+ position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  bottom: 100rpx;
+  left: 35%;
+  text-align: center;
+  z-index: 1;
+}
+.net image
+{
+  position: flex;
+  width: 300rpx;
+  height: 300rpx;
+  animation: netani 2s  infinite linear;
+}
+@keyframes netani {
+  0%,100%{width: 300rpx;height: 300rpx;}
+   50% { width: 320rpx; height: 320rpx;}
+ }
+.net text{
+  position: absolute;
+  top: 262rpx;
+  left: 40rpx;
+  color:rgba(39, 37, 4, 0.849) ;
+}
+/* 我的瓶子 */
+.mybottle
+{
+  position: absolute;
+  width: 320rpx;
+  height: 320rpx;
+  bottom: 100rpx;
+  right: -7%;
+  text-align: center;
+  z-index: 1;
+}
+.mybottle image
+{
+  position: flex;
+  width: 320rpx;
+  height: 320rpx;
+  animation: mybottle 1s  infinite linear;
+}
+@keyframes mybottle {
+  0%,100%{transform: rotate(-15deg)}
+  25% {transform: rotate(0deg)}
+   50% {transform: rotate(15deg)}
+   75% {transform: rotate(0deg)}
+ }
+.mybottle text{
+  position: relative;
+  top: -50rpx;
+  color:rgba(39, 37, 4, 0.849) ;
+}
+/* 扔瓶子页面 */
+.throwpage
+{
+  position: absolute;
+  background-color: rgba(31, 146, 175, 0.719);
+  box-shadow: 0 0 2rpx 6rpx rgba(5, 109, 158, 0.822);
+  margin-top: 130rpx;
+  border-radius: 10rpx;
+  margin-left: 35rpx;
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+/* 瓶子文本内容 */
+.throwtext
+{
+  position: relative;
+  border: 1rpx solid rgba(0, 0, 0, 0.671);
+  width: 97%;
+  height: 45%;
+  left: 10rpx;
+  top: 10rpx;
+  background-color: rgb(170, 220, 233);
+  border-radius: 10rpx;
+  z-index: 1;
+}
+/* 漂流瓶类型页面 */
+.choosetype
+{
+  position: absolute;
+  width: 100%;
+  height: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 35rpx;
+  flex-wrap: wrap;
+
+}
+.chooseimage
+{
+  margin-top: 10rpx;
+  width: 210rpx;
+  height: 210rpx;
+}
+.choosecontent
+{
+  width: 30%;
+  height: 210rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* 选中瓶子样式 */
+.chooseselect
+{
+  width: 30%;
+  height: 210rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(199, 225, 247, 0.801);
+}
+.throwpage button{
+  background-color:rgba(161, 195, 224, 0.801) ;
+}
+/* 扔瓶子动画 */
+.throwbottle
+{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  bottom: 100rpx;
+  left: -5%;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+}
+.throwbottle image
+{
+  position: flex;
+  width: 300rpx;
+  height: 300rpx;
+}
+.diskAnimation {
+  animation: throwbottleai 4s 1 linear;
+  animation-delay: 0.5s;
+}
+@keyframes throwbottleai
+{
+  0%{
+    transform: rotate(0deg);
+    bottom: 100rpx;
+    left: -5%;
+    opacity: 0;
+  }
+ 10% {bottom:250rpx;left: 0%;opacity: 1;}
+ 20%{bottom:450rpx;left: 5%;opacity: 1;}
+  40% {bottom:650rpx;left: 10%;opacity: 1;}
+  60% {bottom:450rpx;left: 20%;opacity: 0.5;}
+  80%{bottom:400rpx;left: 23%;opacity: 0.2;}
+  85%{bottom:400rpx;left: 23%;opacity: 0;}
+  100%{
+    transform: rotate(0deg);
+    bottom: 100rpx;
+    left: -5%;
+    opacity: 0;
+  }
+}
+/* 捞瓶子动画 */
+.netbottle
+{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  bottom: 100rpx;
+  left: 35%;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+}
+.netbottle image
+{
+  position: flex;
+  width: 300rpx;
+  height: 300rpx;
+}
+.disnetAnimation {
+  animation: netai 4s 1 linear;
+  animation-delay: 0.5s;
+}
+@keyframes netai
+{
+  0%{
+    transform: rotate(0deg);
+    bottom: 100rpx;
+    left: 35%;
+    opacity: 0;
+  }
+ 10% {bottom:250rpx;left: 32%;opacity: 1;}
+ 30% {bottom:550rpx;left: 30%;opacity: 1;}
+ 50% {bottom:450rpx;left: 25%;opacity: 0.5;}
+ 70% {bottom:400rpx;left: 22%;opacity: 0.2;}
+  100%{
+    bottom:350rpx;left: 22%;opacity: 0;
+  }
+}
+/* 捞出瓶子动画 */
+.nettdbottle
+{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  bottom:350rpx;
+  left: 22%;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+}
+.nettdbottle image
+{
+  position: flex;
+  width: 300rpx;
+  height: 300rpx;
+}
+.disnettdAnimation {
+  animation: nettai 4s 1 linear;
+  animation-delay: 0s;
+}
+@keyframes nettai
+{
+  0%{
+    transform: rotate(0deg);
+    bottom:350rpx;
+    left: 22%;
+    opacity: 0;
+  }
+  30% {
+    bottom:500rpx;left: 25%;opacity: 0.5;
+  }
+ 70% {bottom:650rpx;left: 28%;opacity: 0.7;}
+ 100% {bottom:750rpx;left: 30%;opacity: 1;}
+}
+/* 瓶子内容 */
+.bottletext
+{
+  position: absolute;
+  border: 1rpx solid rgba(218, 211, 211, 0.671);
+  background-color: rgba(173, 231, 202, 0.842);
+  top: 500rpx;
+  border-radius: 10rpx;
+  left:150rpx;
+  width: 450rpx;
+  height: 120rpx;
+}
+/* 我的瓶子页面 */
+.mybottleBox{
+  height:95% ;
+  overflow: auto;
+}
+.mybottlepage
+{
+  position: absolute;
+  background-color: rgba(150, 236, 236, 0.979);
+  box-shadow: 0 0 50rpx 10rpx rgba(65, 164, 206, 0.822);
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  margin-left: 35rpx;
+  width: 90%;
+  height: 95%;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  overflow: auto;
+}
+.netbottlepage
+{
+  position: absolute;
+  background-color: rgba(118, 164, 228, 0.979);
+  box-shadow: 0 0 50rpx 10rpx rgba(139, 243, 243, 0.822);
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  margin-left: 35rpx;
+  width: 90%;
+  height: 95%;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  overflow: auto;
+}
+.mybutton
+{
+  position: fixed;
+  left: 30rpx;
+  top: 30rpx;
+  width: 45%;
+  background-color: rgba(235, 229, 229, 0.911);
+  z-index: 2;
+}
+.netbutton
+{
+  position: fixed;
+  right: 30rpx;
+  top: 30rpx;
+  width: 45%;
+  background-color: rgba(235, 229, 229, 0.911);
+  z-index: 2;
+}
+.pagestyle
+{
+  /* position: absolute; */
+  width: 95%;
+  height: 200rpx;
+  margin: auto;
+  margin-top: 120rpx;
+  background: rgba(15, 15, 15, 0.486);
+  border-radius: 20rpx;
+  opacity: 0.6;
+  backdrop-filter: blur(20px);
+  z-index: 2;
+  color: whitesmoke;
+}
+.username{
+  position: absolute;
+  left: 30rpx;
+  font-size: 35rpx;
+  font-weight: 400;
+  color: azure;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content{
+  position:absolute;
+  left: 150rpx;
+  top: 90rpx;
+  font-size: 30rpx;
+  font-weight: 300;
+}
+.time
+{
+  position: absolute;
+  right: 30rpx;
+  bottom: 20rpx;
+  font-size: 20rpx;
+}
+.closebottlepage{
+  position: fixed;
+  height: 50rpx;
+  width: 60rpx;
+  top: 0px;
+  right: 20px;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  z-index: 3;
+}
+
+
+
+

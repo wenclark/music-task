@@ -1,0 +1,106 @@
+<!--pages/charts/charts.wxml-->
+<van-tabs animated>
+  <van-tab title="官方">
+    <view class="all">
+      <view class="back1">
+        <view class="cylinder1"><text>说唱榜</text>
+          <image src="/static/image/hip.jpg" ></image>
+        </view>
+        <view class="cylinder2">古典榜
+          <image src="/static/image/old.webp"></image>
+        </view>
+        <view class="cylinder3">民谣榜
+          <image src="/static/image/folk.jpg"></image>
+        </view>
+        <view class="wave"></view>
+        <view class='wave_1'></view>
+        <view class='wave_2'></view>
+        <view class="back">
+          <view>
+            <swiper class="topswiper" style="height: 400rpx;">
+              <swiper-item>
+                <view class="swiperone" bindtap="togufeng">
+                  <text class="title" >{{gufeng.name}}</text>
+                  <view class="music_chart" wx:for="{{gufeng.tracks}}" wx:key="index" wx:for-index="idx">
+                    <text class="count">{{idx+1}}</text>
+                    <text class="music_name">{{gufeng.tracks[idx].name}}</text>
+                  </view>
+                </view>
+              </swiper-item>
+              <swiper-item>
+                <view class="swiperone" bindtap="toshuochang">
+                  <text class="title">{{shuochang.name}}</text>
+                  <view class="music_chart" wx:for="{{shuochang.tracks}}" wx:key="index" wx:for-index="idx">
+                    <text class="count">{{idx+1}}</text>
+                    <text class="music_name">{{shuochang.tracks[idx].name}}</text>
+                  </view>
+                </view>
+              </swiper-item>
+              <swiper-item>
+                <view class="swiperone" bindtap="tominyao">
+                  <text class="title" >{{minyao.name}}</text>
+                  <view class="music_chart" wx:for="{{minyao.tracks}}" wx:key="index" wx:for-index="idx">
+                    <text class="count">{{idx+1}}</text>
+                    <text class="music_name">{{minyao.tracks[idx].name}}</text>
+                  </view>
+                </view>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <!-- 精选榜 -->
+  <van-tab title="精选">
+    <view class="choiceback">
+      <view class="vertical"></view>
+      <view class="hor">
+        <view class="horizontal" wx:for="{{music_listpart}}" wx:key="index" data-id="{{item.id}}" bindtap="tese">
+          <image src="{{music_listpart[index].coverImgUrl}}"></image>
+        </view>
+      </view>
+      <view class="black"></view>
+      <view class="black1"></view>
+      <view class="black2"></view>
+      <view class="black3"></view>
+      <view class="black4"></view>
+      <view class="black5"></view>
+    </view>
+  </van-tab>
+  <!-- 全球榜 11.12.13.14.15-->
+  <van-tab title="全球">
+    <view class="circleback">
+      <view class="allcircle" wx:for="{{music_allcircle}}" wx:key="index" data-id="{{item.id}}" bindtap="tese">
+        <text class="circletext">{{music_allcircle[index].name}}</text>
+        <image src="{{music_allcircle[index].coverImgUrl}}"></image>
+        <text class="updatetext">{{music_allcircle[index].updateFrequency}}</text>
+      </view>
+    </view>
+  </van-tab>
+  <!-- 语种榜 23 30~34 -->
+  <van-tab title="语种">
+    <view class="circleback">
+      <view class="allcircle" wx:for="{{ music_language}}" wx:key="index" data-id="{{item.id}}" bindtap="tese">
+        <text class="circletext">{{ music_language[index].name}}</text>
+        <image src="{{ music_language[index].coverImgUrl}}"></image>
+        <text class="updatetext">{{ music_language[index].updateFrequency}}</text>
+      </view>
+      <view class="allcircle" wx:for="{{ music_language1}}" wx:key="index" data-id="{{item.id}}" bindtap="tese">
+        <text class="circletext">{{music_language[index].name}}</text>
+        <image src="{{ music_language[index].coverImgUrl}}"></image>
+        <text class="updatetext">{{ music_language[index].updateFrequency}}</text>
+      </view>
+    </view>
+  </van-tab>
+  <!-- 特色榜 -->
+  <van-tab title="特色">
+    <view class="circleback">
+      <view class="allcircle" wx:for="{{music_listall}}" wx:key="index" data-id="{{music_listall[index].id}}" bindtap="tese">
+        <text class="circletext">{{ music_listall[index].name}}</text>
+        <image src="{{ music_listall[index].coverImgUrl}}"></image>
+        <text class="updatetext">{{ music_listall[index].updateFrequency}}</text>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

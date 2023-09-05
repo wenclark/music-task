@@ -1,0 +1,22 @@
+<!--pages/playlist/playlist.wxml-->
+<!-- 歌单背景图片 -->
+<view class="backgroundbox">
+  <image src="{{playlistinfo.pic}}" class="backgroundimg"></image>
+  <view class="centerimage" style="background-image:url({{playlistinfo.pic}});background-size:100% 100%;"></view>
+</view>
+<!-- 歌单标题 -->
+<view class="title">{{playlistinfo.name}}</view>
+<!-- 歌单标签 -->
+<view class="tags">
+  <view class="tag" wx:for="{{playlistinfo.tags}}">{{item}}</view>
+</view>
+<view class="iconfont icon-bofang2 runall" bindtap="tolistsong">播放全部</view>
+<!-- 歌单主体 -->
+<view class="playlistbody">
+  <!-- 歌曲列表 -->
+  <view class="listsong" wx:for="{{playlist}}" wx:key="id" data-index="{{index}}" data-songid="{{item.id}}" bindtap="tolistsong">
+    <view class="songimg" style="background-image: url({{item.al.picUrl}}); background-size:100% 100%;"></view>
+    <view class="songname">{{item.name}}</view>
+    <view class="singer">--{{item.ar[0].name}}</view>
+  </view>
+</view>

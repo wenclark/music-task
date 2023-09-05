@@ -1,0 +1,47 @@
+<!--pages/recommendsong/recommendsong.wxml-->
+<view class="recommendSong">
+  <view class="header">
+    <view class="header1" style="background-image: url({{songs[0].al.picUrl}}); background-size:100% 100%;">
+      <view class="radius1"></view>
+      <view class="radius2"></view>
+      <view class="radius3"></view>
+      <view class="radius4"></view>
+      <view class="radius5"></view>
+      <view class="radius6"></view>
+      <view class="radius7"></view>
+      <view class="radius8"></view>
+      <view class="dateBox">
+        <view class="text">
+          <text>{{month}}</text>/<text>{{day}}</text>
+          <view>今日歌曲推荐</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 推荐歌曲列表 -->
+  <view class="listContanier">
+    <view class="listhead">
+      <text bindtap="tosongdetail">播放全部</text>
+    </view>
+    <!-- 歌单内容 -->
+    <scroll-view scroll-y="true" class="listsongs" wx:if="{{songs.length}}">
+      <view class="songs" wx:for="{{songs}}" wx:key="id" data-song="{{item}}" data-songindex='{{index}}' data-songid="{{item.id}}" bindtap="tosongdetail">
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="detailBox">
+          <text>{{item.name}}</text>
+          <text class="nickname">{{item.song.ar[0].name}}</text>
+        </view>
+
+        <view class="iconfont icon-gengduo-shuxiang">
+          <view class="singer">{{item.ar[0].name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 未登录时提示 -->
+    <view wx:else class="iconfont icon-denglu">
+      <view class="remind">请登录...</view>
+    </view>
+  </view>
+</view>

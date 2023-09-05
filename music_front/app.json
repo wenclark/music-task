@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/recommendsong/recommendsong",
+    "pages/person/person",
+    "pages/singdetail/singdetail",
+    "pages/search/search",
+    "pages/comment/comment",
+    "pages/charts/charts",
+    "pages/playlist/playlist",
+    "pages/bottle/bottle",
+    "pages/move/move",
+    "pages/chartsdetail/chartsdetail",
+    "pages/radio/radio",
+    "pages/radiolist/radiolist",
+    "pages/heart/heart",
+    "pages/heartsong/heartsong",
+    "pages/bottlecomment/bottlecomment",
+    "pages/classfsing/classfsing",
+    "pages/classification/classificaiton",
+    "pages/history/history",
+    "pages/radiodetail/radiodetail",
+    "pages/index/index"
+  ],
+  "entryPagePath":  "pages/index/index",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "relax music",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#8a9dd4",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/image/index.png",
+        "selectedIconPath": "/static/image/optionindex.png"
+      },
+      {
+        "pagePath": "pages/move/move",
+        "text": "动态",
+        "iconPath": "/static/image/move.png",
+        "selectedIconPath": "/static/image/optionmove.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "/static/image/man.png",
+        "selectedIconPath": "/static/image/optionman.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  },
+  "requiredBackgroundModes": ["audio"] 
+}

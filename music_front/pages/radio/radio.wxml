@@ -1,0 +1,25 @@
+<!--pages/radio/radio.wxml-->
+<view>
+  <scroll-view scroll-x="true" enable-flex="true" class="scroll">
+    <view wx:for="{{radiolist}}" wx:key="index">
+      <view class="{{checked===index?'checked':'nochecked'}}" data-index="{{index}}" bindtap="checkedindex" data-id="{{radiolist[index].id}}">
+        {{ radiolist[index].name }}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="right">
+    <view class="radiobody"  vertical="{{false}}">
+      <view  wx:key="index" item-id='{{checked}}' >
+        <scroll-view scroll-y="true" class="listsongs">
+          <view class="vedios" wx:for="{{radiodatalist}}" wx:key="id" data-song="{{item}}" data-id="{{radiodatalist[index].id}}" data-songindex='{{index}}' bindtap="tovedio">
+            <image src="{{item.picUrl}}"></image>
+            <view class="detailBox">
+              <text class="title-text"> {{item.name}}</text>
+              <text class="titletext"> {{item.desc}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

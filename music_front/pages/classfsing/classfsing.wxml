@@ -1,0 +1,14 @@
+<!--pages/classfsing/classfsing.wxml-->
+<view >
+  <scroll-view class="scroll" scroll-x="true" enable-flex="true">
+     <view class="{{select==index?'selected':'noselected'}}" data-index="{{index}}"bindtap="select" wx:for="{{checkedsong}}">
+      {{checkedsong[index]}}
+     </view>
+  </scroll-view>
+  <view class="back">
+  <view wx:for="{{singlist}}" wx:key="id" class="music"  data-playlistid="{{item.id}}" bindtap="toplaylist" >
+              <image src="{{singlist[index].coverImgUrl}}"></image>
+              <text>{{singlist[index].name}}</text>
+  </view>
+  </view>
+</view>

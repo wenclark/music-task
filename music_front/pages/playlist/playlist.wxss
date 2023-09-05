@@ -1,0 +1,85 @@
+/* pages/playlist/playlist.wxss */
+page{
+  height: 100%;
+}
+.backgroundbox{
+  position: relative;
+  height: 50%;
+  /* background-color: rgba(13, 13, 14, 0.568); */
+  background-image: linear-gradient(rgb(41, 41, 41),transparent);
+}
+.backgroundimg{
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  border-radius: 100% 100% 100% 100% / 0% 0% 10% 10%;
+}
+.centerimage{
+  position: absolute;
+  width: 360rpx;
+  height: 350rpx;
+  top: 15%;
+  left: 25%;
+  border-radius: 20%;
+  box-shadow: 0px 0px 100px 10px rgb(145, 143, 143);
+}
+.playlistbody{
+  position: relative;
+  top: -50px;
+  height: 50%;
+  background-image: linear-gradient(transparent,rgb(44, 43, 43));
+  overflow: auto;
+}
+.title{
+  position: absolute;
+  top: 40%;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  color: rgb(250, 243, 243);
+  font-weight:600;
+}
+.tags{
+  display: flex;
+  min-height: 30rpx;
+  margin-bottom: 120rpx;
+  margin-top: -30rpx;
+}
+.tag{
+  width: 70rpx;
+  height: 30rpx;
+  text-align: center;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 20rpx;
+}
+.runall{
+  position: absolute;
+  top: 590rpx;
+  left: 250rpx;
+}
+.listsong{
+  display: flex;
+  height: 120rpx;
+  width: 95%;
+  margin: auto;
+  line-height: 120rpx;
+  margin-top: 30rpx;
+  color: rgba(29, 9, 9, 0.993);
+}
+.songimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50px;
+  margin-right: 100rpx;
+}
+.songname{
+  font-size: 35rpx;
+}
+.singer{
+  font-size: 25rpx;
+  margin-left: 30rpx;
+  font-style:italic;
+}

@@ -1,0 +1,28 @@
+<!--pages/chartsdetail/chartsdetail.wxml-->
+<view class="back">
+  <view class="up" style="background-image: url({{songs.tracks[0].al.picUrl}}); background-size:100% 100%;">
+    <image class="image" src="{{songs.coverImgUrl}}"></image>
+    <view class="text-back">
+      <text class="des"> {{songs.description}} </text>
+    </view>
+  </view>
+  <!-- 歌曲列表 -->
+  <view class="listContanier">
+    <view class="listhead">
+      <text bindtap="tosongdetail">播放全部</text>
+    </view>
+    <scroll-view scroll-y="true" class="listsongs">
+      <view class="songs" wx:for="{{songs.tracks}}" wx:key="id" data-songid="{{item.id}}" data-songindex='{{index}}' bindtap="tosongdetail">
+        <text>{{index+1}}</text>
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="detailBox">
+          <text class="nametext">{{item.name}}</text>
+          <text class="nickname">{{item.song.artists[0].name}}</text>
+        </view>
+        <view class="iconfont icon-gengduo-shuxiang">
+          <view class="singer">{{item.ar[0].name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

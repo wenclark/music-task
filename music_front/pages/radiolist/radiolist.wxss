@@ -1,0 +1,83 @@
+/* pages/radiolist/radiolist.wxss */
+.back
+{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.back1
+{
+  position: absolute;
+  height: 100%;
+  width: 98%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.listContanier
+{
+  position: absolute;
+  box-shadow: 0 0 2rpx 6rpx rgba(233, 235, 236, 0.822);
+  border: 1rpx solid rgba(219, 216, 216, 0.671);
+  margin-top: 10rpx;
+  width: 95%;
+  background: rgba(209, 206, 206, 0.548);
+  backdrop-filter: blur(20px);
+}
+.text
+{
+ position: absolute;
+margin-left: 10%;
+margin-top: 8%;
+}
+.listhead{
+  height: 80rpx;
+  color: rgb(255, 255, 255);
+}
+.listsongs{
+  height: 1100rpx;
+  overflow: auto;
+  color: rgb(255, 255, 255);
+}
+.songs{
+  position: relative;
+  display: flex;
+  height: 150rpx;
+}
+.songs image{
+  height: 120rpx;
+  width: 120rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+.detailBox{
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+  margin-left: 30rpx;
+  margin-top: 18rpx;
+  font-size:35rpx;
+}
+.textt
+{
+    /* 表示几行后超出隐藏 */
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    /* 超出隐藏 */
+    overflow:hidden;
+    /*超出显示为省略号*/
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+}
+.nickname{
+  font-size: 25rpx;
+  color: #bfbfbf;
+}
+.singer{
+  position: absolute;
+  margin-left:-90rpx;
+  margin-top: -40rpx;
+  height: 100rpx;
+  width: 100rpx;
+  font-size: 25rpx;
+}

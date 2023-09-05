@@ -1,0 +1,55 @@
+/* pages/classfsing/classfsing.wxss */
+.scroll {
+  width: 100%;
+  height: 100rpx;
+  margin: 0rpx auto;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap; 
+  vertical-align: top;
+}
+.noselected{
+  margin-top:20rpx ;
+  margin-right:30rpx;
+  margin-left:30rpx;
+  border-radius: 20%;
+}
+.selected
+{
+  margin-top:20rpx ;
+  margin-right:30rpx;
+  margin-left:30rpx;
+  border-radius: 20%;
+  background-color: rgba(125, 217, 240, 0.5);
+}
+/* 歌单样式 */
+.back
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 15rpx;
+}
+.music {
+  height: 280rpx;
+  width: 225rpx;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+}
+.music image {
+  margin-top: 5rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  box-shadow: -5rpx -10rpx 7rpx rgba(146, 151, 151, 0.904);
+}
+.music text {
+  position: relative;
+  font-size: 30rpx;
+  color: var(--textColor);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

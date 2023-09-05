@@ -1,0 +1,27 @@
+<!--pages/radiodetail/radiodetail.wxml-->
+ <view class="radiobody" >
+  <view class="radiodetail"style="background-image: url({{radioimg}}); background-size:100% 100%;">
+    <view class="iconfont icon-fanhui1" bindtap="backpage"></view>
+    <!-- 歌名及作者 -->
+    <view class="back" style="background-image: url({{radioimg}}); background-size:100% 100%;"></view>
+    <view class="title">{{radioname}}</view>
+     <view class="box1"  style="background-image: url({{radioimg}}); background-size:100% 100%;"> </view> 
+     <view class="box2" style="background-image: url({{radioimg}}); background-size:100% 100%;" > </view> 
+     <view class="box3"></view>
+     <view class="text">{{radiodec}}</view>
+  </view>
+   <!-- 控制区域 -->
+   <view> 
+      <!-- 进度栏 -->
+      <view class="progressbox">
+        <view class="time">{{curtime}}</view>
+        <slider class="progress" block-size="12" activeColor="#e9e9e9" color="#888888" value="{{progress}}" bindchange="changeProgress"></slider>
+        <view class="time">{{alltime}}</view>
+      </view> 
+      <!-- 底部栏 -->
+       <view class="button">
+          <view class="iconfont icon-bofang" style="font-size: 180rpx; " hidden="{{isPlay}}" bindtap="startmusic"></view>
+          <view class="iconfont icon-zanting" style="font-size: 180rpx;" bindtap="stopmusic" hidden="{{!isPlay}}"></view>
+      </view>
+    </view>
+</view> 

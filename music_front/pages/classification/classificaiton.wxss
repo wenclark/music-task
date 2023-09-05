@@ -1,0 +1,63 @@
+/* pages/classification/classificaiton.wxss */
+.classback
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgba(241, 220, 241, 0.267);
+}
+.text
+{
+  position: absolute;
+  height: 30rpx;
+  left: 150rpx;
+  font-size: 40rpx;
+  color: rgb(48, 49, 49);
+}
+.text1
+{
+  position: absolute;
+  color: rgb(156, 28, 173);
+  font-size: 50rpx;
+  right: 0;
+  height: 30rpx;
+}
+.classification
+{
+  position: relative;
+  top: 70rpx;
+  border: 1rpx solid rgba(148, 146, 146, 0.8);
+  background-color: rgba(192, 188, 188, 0.267);
+  border-radius: 20%;
+  margin-top: 40rpx;
+  margin-left:40rpx;
+  width: 200rpx;
+  height: 70rpx;
+  box-shadow: 5rpx -5rpx 5rpx rgb(128, 131, 131);
+}
+.classificationse
+{
+  position: relative;
+  top: 70rpx;
+  border: 1rpx solid rgba(148, 146, 146, 0.8);
+  background-color: rgba(73, 74, 75, 0.596);
+  border-radius: 20%;
+  margin-top: 40rpx;
+  margin-left:40rpx;
+  width: 200rpx;
+  height: 70rpx;
+  box-shadow: 5rpx -5rpx 5rpx rgb(127, 167, 167);
+}
+.hid
+{
+  position: absolute;
+  width: 400rpx;
+  height: 100rpx;
+  top: 200rpx;
+  left: 200rpx;
+  color: rgb(247, 247, 247);
+  font-size: 50rpx;
+  background-color: rgba(148, 146, 146, 0.8);
+  border: 1rpx solid rgba(148, 146, 146, 0.8);
+}

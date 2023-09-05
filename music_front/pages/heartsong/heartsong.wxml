@@ -1,0 +1,48 @@
+<!-- pages/heartsong/heartsong.wxml -->
+<view class="singbody">
+  <image class="singback" src="cloud://musictask-6gpn7053b831a4ab.6d75-musictask-6gpn7053b831a4ab-1317070265/image/heartback.png"></image>
+  <view class="singdetail">
+    <view class="iconfont icon-fanhui1" bindtap="backpage"></view>
+    <!-- 音乐图片 -->
+    <view class="musicimg">
+      <image src="{{songinfo.al.picUrl}}" style="height: 100% ;width: 100%;"></image>
+    </view>
+
+    <!-- 心动图 -->
+    <view class="heartimg" hidden="{{!showheart}}">
+      <image src="cloud://musictask-6gpn7053b831a4ab.6d75-musictask-6gpn7053b831a4ab-1317070265/image/heartbtn.png" style="height: 100% ;width: 100%;"></image>
+    </view>
+
+    <!-- 评论按钮 -->
+     <view class='commentbtn iconfont icon-pinglun' catchtap="tocomment"></view>
+    <!-- 歌词 -->
+    <view class="lrcbox">
+      <scroll-view id="lrcscroll" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation>
+        <view wx:for="{{lrcword}}" wx:key="index" class="songlrc {{lrclocation===index?'actived-word':''}}" catchtap="LrcControlmusic" data-location="{{index}}">{{item?item:" "}}</view>
+      </scroll-view>
+    </view>
+    <!-- 控制区域 -->
+    <view class="back1">
+      <!-- 进度栏 -->
+      <view class="progressbox">
+        <view class="time">{{curtime}}</view>
+        <slider class="progress" block-size="12" activeColor="#e9e9e9" color="#888888" value="{{progress}}" bindchange="changeProgress"></slider>
+        <view class="time">{{alltime}}</view>
+      </view>
+      <!-- 底部栏 -->
+      <view class="buttonlist">
+        <view class="left">
+          <view class="iconfont icon-xunhuanbofang" bindtap="looprun" hidden="{{allrun}}"></view>
+          <view class="iconfont icon-danquxunhuan" bindtap="notloop" hidden="{{!allrun}}"></view>
+        </view>
+        <view class="iconfont icon-pre" data-switch='pre' bindtap="switchsong" style="font-size: 60rpx;"></view>
+        <view class="center">
+          <view class="iconfont icon-bofang3" style="font-size: 90rpx; " hidden="{{isPlay}}" bindtap="startmusic"></view>
+          <view class="iconfont icon-zanting1" style="font-size: 90rpx;" bindtap="stopmusic" hidden="{{!isPlay}}"></view>
+        </view>
+        <view class="iconfont icon-xiayigexiayiqu" data-switch='next' bindtap="switchsong" style="font-size: 60rpx;"></view>
+        <view class="iconfont icon-playlistMusic4"></view>
+      </view>
+    </view>
+  </view>
+</view>

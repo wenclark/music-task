@@ -1,0 +1,119 @@
+/* pages/heartsong/heartsong.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.singbody{
+  position: relative;
+  height: 100%;
+  padding-top: 10rpx;
+  overflow: hidden;
+}
+.singdetail {
+  /* display: flex; */
+  height: 98%;
+  width: 96%;
+  margin: auto;
+  border-radius: 20rpx;
+  background: rgba(68, 66, 66, 0.2);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10rpx;
+  box-shadow: 0 0 100rpx 50rpx rgba(17, 17, 17, 0.699);
+}
+.icon-fanhui1{
+  position: absolute;
+  top: 40rpx;
+  left: 20rpx;
+  font-size: 50rpx;
+}
+.singback{
+  width: 100%;
+  height: 100%;
+  position:absolute ;
+}
+.musicimg{
+  position: absolute;
+  width: 500rpx;
+  height: 400rpx;
+  border-radius: 50rpx;
+  left: 15%;
+  top: 8%;
+  overflow: hidden;
+  box-shadow: 0rpx 20rpx 30rpx rgb(243, 176, 187);
+}
+.progressbox{
+  position: absolute;
+  display: flex;
+  bottom: 130rpx;
+  width: 100%;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height:80rpx ;
+  justify-content: space-around;
+}
+.time{
+  color: rgba(241, 237, 237, 0.842);
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.progress{
+  width: 95%;
+}
+.buttonlist{
+  display:flex;
+  position: fixed;
+   bottom: 0rpx; 
+  height:150rpx;
+  width: 100%;
+  justify-content:space-around;
+  line-height: 150rpx;
+}
+.buttonlist .iconfont{
+  color: rgba(145, 7, 99, 0.993);
+  font-size: 50rpx;
+}
+.lrcbox{
+  position: absolute;
+  top: 520rpx;
+  left: 10%;
+  height:600rpx ;
+  width: 80%;
+}
+.lrcbox scroll-view{
+  height: 100%;
+  color: rgb(252, 250, 250);
+  overflow: auto;
+}
+.songlrc{
+  width: 85%;
+  margin: auto;
+  margin-bottom: 20rpx;
+  min-height: 20px;
+  font-family:cursive;
+  font-size: 35rpx;
+}
+.actived-word{
+  color: #8921a3f8;
+  font-size: 45rpx;
+}
+.heartimg{
+  position: absolute;
+  left: 35%;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+  top: 30%;
+  z-index: 3;
+}
+.icon-pinglun{
+ position: absolute;
+ top: 80%;
+ right: 40rpx;
+ color: whitesmoke;
+ font-size: 45rpx;
+}

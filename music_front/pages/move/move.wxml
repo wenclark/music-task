@@ -1,0 +1,23 @@
+<!--pages/move/move.wxml-->
+<!-- 头部导航区域 -->
+<van-tabs animated bind:change="getid" active="{{active}}">
+  <view wx:if="{{!video.length}}" class="iconfont icon-denglu">
+        <view class="remind">请登录...</view>
+    </view>
+  <!-- 导航栏部分 -->
+  <van-tab  wx:for="{{vidiolist}}" class="navbutton" title="{{vidiolist[index].name}}">
+    <!-- 视频整体 -->
+    <view class="videoBox">
+      <!-- 单个视频 -->
+      <view class="videoitem" wx:for="{{video}}" style="background-image: url({{item.data.creator.backgroundUrl}});background-size:100% 100%; ">
+        <view class="avator" style="background-image: url({{item.data.creator.avatarUrl}});background-size:100% 100%;"></view>
+        <view class="videotitle">{{item.data.title}}</view>
+        <view class="showvideobox">
+          <video wx:if="{{item.data.vid === curvideoid}}" src="{{videourls[index]}}" custom-cache="{false}" class="common" id="{{item.data.vid}}" autoplay="" object-fit="fill" poster="{{item.data.coverUrl}}"></video>
+          <image wx:else class="common" src="{{item.data.coverUrl}}" bindtap="handleplay" id="{{item.data.vid}}"></image>
+        </view>
+
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

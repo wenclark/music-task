@@ -1,0 +1,30 @@
+<!--pages/bottlecomment/bottlecomment.wxml-->
+<view >
+  <!-- 漂流瓶内容 -->
+  <image class="backimage" src="cloud://musictask-6gpn7053b831a4ab.6d75-musictask-6gpn7053b831a4ab-1317070265/image/bottleback.jpg"></image>
+  <view class="back">
+    <view class="content">
+      <text bindtap="return">关闭</text>
+      <view class="contentback">
+      <text class="type">{{bottle.type}}</text>
+      <view class="username">{{bottle.user}} :</view>
+      <view class="bottlecontent">{{bottle.content}}</view>
+      </view>
+      <!-- <text class="time">{{bottle.sendtime}}</text> -->
+    </view>
+  </view>
+</view>
+<!-- 评论内容 -->
+<view class="comment">
+  <view class="comments">
+    <view class="comment-back" wx:for="{{commentinfo}}">
+        <view class="name">{{item.commenter}}</view>
+        <view class="commentcontent">{{item.content}}</view>
+    </view>
+  </view>
+  <!-- 发送评论栏 -->
+  <view class="commentbutton">
+    <view class="box"><input type="text" class="inputcomment" value="{{bocomment}}"  bindinput="inputcomment" /></view>
+    <view class="submit" bindtap="sendcomment">评论</view>
+  </view>
+</view>

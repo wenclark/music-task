@@ -1,0 +1,9 @@
+<!--pages/classification/classificaiton.wxml-->
+<view class="classback">
+    <text class="text">首先请选择喜欢的歌单标签</text> 
+    <text class="text1" bindtap="gosing">Go></text> 
+     <view wx:for="{{classlist}}" data-index="{{index}}" class="{{checked[index]?'classificationse':'classification'}}" bindtap="getcheck" >
+      {{classlist[index].name}}
+      </view>
+      <view class="hid" hidden="{{hidden}}">请选中标签噢</view>
+</view>

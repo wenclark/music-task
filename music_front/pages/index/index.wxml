@@ -1,0 +1,75 @@
+<!--pages/index/index.wxml-->
+<!-- 搜索框区域 -->
+<view class="header">
+  <image src="{{imgurl}}/linemusic.png"></image>
+  <input class="find" placeholder=" 搜索" bindtap="toSearch">
+  </input>
+  <image src="{{imgurl}}/say.png"></image>
+</view>
+  <!-- 轮播图区域 -->
+  <swiper class="up" autoplay="true" circular="true">
+    <swiper-item wx:for="{{banner}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 五个标识 -->
+  <view class="model">
+    <view class="modelinner" bindtap="showsongs">
+      <image class="design" src="{{imgurl}}/tuijian.png"></image>
+      <text>每日推荐</text>
+    </view>
+    <view class="modelinner" bindtap="showbottle">
+      <image class="design" src="{{imgurl}}/diantai.png"></image>
+      <text>漂流瓶</text>
+    </view>
+    <view class="modelinner" bindtap="showclass" >
+      <image class="design" src="{{imgurl}}/sing.png"></image>
+      <text>歌单</text>
+    </view>
+    <view class="modelinner" bindtap="showchars">
+      <image class="design" src="{{imgurl}}/line.png"></image>
+      <text>排行榜</text>
+    </view>
+    <view class="modelinner" bindtap="showradio" >
+      <image class="design" src="{{imgurl}}/book.png"></image>
+      <text>电台</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲 -->
+  <view class="recommendmusic">
+    <text class="text-recommend" bindtap="showclass"  >推荐·歌单></text>
+    <scroll-view enhanced="true" show-scrollbar="false" class="recommend-music" enable-flex="true" scroll-x="true" show-scrollbar="false">
+     <!-- 滚动歌单 -->
+     <view class="scroll-music">
+        <swiper class="move_music" vertical="true" autoplay="true" circular="true">
+          <swiper-item wx:for="{{recomend_move}}" wx:key="id" data-playlistid="{{item.id}}" bindtap="toplaylist">
+            <view class="scroll-music2">
+              <image src="{{item.picUrl}}"></image>
+              <text>{{item.name}}</text>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!-- 静态歌单 -->
+      <view class="scroll-music" wx:for="{{recomend_static}}" wx:key="id" data-playlistid="{{item.id}}" bindtap="toplaylist">
+        <image src="{{item.picUrl}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+<!-- 排行榜 -->
+<view class="chart">
+  <text class="line"  bindtap="showchars">排行榜></text>
+  <!-- 内容  -->
+  <swiper class="topswiper" >
+    <swiper-item wx:for="{{music_listpart}}" wx:key="index" wx:for-item="itm" data-id="{{itm.id}}"  bindtap="tochart">
+      <view class="swiperone">
+        <view class="title"><image src="{{itm.coverImgUrl}}"></image></view>
+        <view class="music_chart" wx:for="{{itm.tracks}}" wx:key="index" wx:for-index="idx">
+          <text class="count">{{idx+1}}</text>
+          <text class="music_name">{{item.first}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

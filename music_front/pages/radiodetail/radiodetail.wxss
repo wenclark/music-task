@@ -1,0 +1,142 @@
+/* pages/radiodetail/radiodetail.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+.radiobody{
+  height: 100%;
+  overflow: hidden;
+}
+.radiodetail {
+  /* display: flex; */
+  position: absolute;
+  height: 75%;
+  width: 100%;
+  top: -15rpx;
+  border-radius: 20rpx;
+  background: rgba(107, 104, 104, 0.781);
+  text-align: center;
+  box-shadow: 0 0 100rpx 10rpx rgba(17, 17, 17, 0.699);
+  z-index: -4;
+}
+.icon-fanhui1{
+  position: absolute;
+  top: 25rpx;
+  left: 20rpx;
+  font-size: 50rpx;
+  color: rgb(10, 10, 10);
+}
+.title{
+  color: #66385cdc;
+ margin-left:150rpx;
+  width: 70%;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  font-family: 宋体;
+    /* 表示几行后超出隐藏 */
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    /* 超出隐藏 */
+    overflow:hidden;
+    /*超出显示为省略号*/
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+}
+.back
+{
+  position: absolute;
+  border: 1rpx solid rgba(170, 156, 156, 0.1);
+  top: 180rpx;
+  left: 100rpx;
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 5%;
+  background-color: rgba(151, 147, 147, 0.253);
+  box-shadow: 10rpx 10rpx 15rpx rgb(92, 92, 90);
+  z-index: 0;
+}
+.box1{
+  position: absolute;
+  border: 1rpx solid rgba(28, 122, 165, 0.945);
+  top: 140rpx;
+  left: 70rpx;
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 5%;
+  background-color: rgba(66, 183, 238, 0.384);
+  box-shadow: -10rpx -10rpx 15rpx rgba(122, 197, 207, 0.747);
+  z-index: -1;
+}
+.box2{
+  position: absolute;
+  border: 1rpx solid rgba(236, 43, 194, 0.459);
+  top: 90rpx;
+  left: 40rpx;
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 5%;
+  background-color: rgba(228, 113, 222, 0.281);
+  box-shadow: -10rpx -10rpx 15rpx rgb(155, 14, 173);
+  z-index: -2;
+}
+.box3
+{
+  position: absolute;
+  border: 160rpx solid rgba(223, 219, 219, 0.87);
+  top: 20rpx;
+  left: 10rpx;
+  width: 550rpx;
+  height: 520rpx;
+  background-color: rgba(0, 0, 0, 0.459);
+  border-radius: 5%;
+  z-index: -3;
+}
+.text
+{
+  position: absolute;
+  height:150rpx;
+  bottom: 30rpx;
+  left: 10rpx;
+  right: 10rpx;
+    /* 表示几行后超出隐藏 */
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    /* 超出隐藏 */
+    overflow:hidden;
+    /*超出显示为省略号*/
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+}
+.progressbox{
+  position: absolute;
+  display: flex;
+  bottom: 190rpx;
+  width: 100%;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height:80rpx ;
+  justify-content: space-around;
+}
+.time{
+  color: rgba(12, 12, 12, 0.842);
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.progress{
+  width: 95%;
+}
+.button{
+  display:flex;
+  position: fixed;
+   bottom: 20rpx; 
+  height:150rpx;
+  width: 100%;
+  justify-content:space-around;
+  line-height: 150rpx;
+}
+.button .iconfont{
+  color: rgba(167, 162, 162, 0.842);
+  font-size: 50rpx;
+}
+

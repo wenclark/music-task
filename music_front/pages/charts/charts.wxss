@@ -1,0 +1,372 @@
+/* pages/charts/charts.wxss */
+page{height: 100%;}
+
+/* 官方榜 */
+.all
+{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(224, 221, 230, 0.2);
+}
+/* 方形背景图 */
+.back
+{
+  /* border: 1rpx solid #e2e9dc; */
+  width: 700rpx;
+  height:90%;
+  background-color: rgba(175, 174, 169, 0.007);
+  border-radius: 10%;
+  box-shadow: 1rpx 1rpx 15rpx rgb(138, 138, 133);
+  z-index: 1;
+}
+.back1
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 550rpx;
+  width: 100%;
+   height: 600rpx;
+  background-color: rgb(245, 244, 245);
+  text-align: center;
+}
+/* 波浪图 */
+.wave:before,.wave:after{
+  content:"";
+	position: absolute;
+	width: 300rpx;
+	height: 300rpx;
+	margin-top: 180rpx;
+	margin-left: 130rpx;
+	background-color: rgba(12, 87, 138, 0.6);
+	border-radius: 45%;
+	transform: translate(-50%, -70%) rotate(0);
+  animation: rotate 6s linear infinite;
+  z-index: -1;
+}
+
+.wave:after {
+	border-radius: 47%;
+	background-color: rgba(208, 240, 250);
+	transform: translate(-50%, -70%) rotate(0);
+	animation: rotate 10s linear -5s infinite;
+}
+
+@keyframes rotate {
+	50% {
+		transform: translate(-50%, -73%) rotate(180deg);
+	} 100% {
+		transform: translate(-50%, -70%) rotate(360deg);
+	}
+} 
+ .wave_1:before,.wave_1:after{
+	content: "";
+  position: absolute;
+  width: 330rpx;
+	height: 330rpx;
+	margin-top: 170rpx;
+	margin-left: 355rpx;
+	background-color: rgba(114, 37, 138, 0.6);
+	border-radius: 45%;
+	transform: translate(-50%, -70%) rotate(0);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+.wave_1:after {
+	border-radius: 47%;
+	background-color: rgb(243, 223, 243);
+	transform: translate(-50%, -70%) rotate(0);
+	animation: rotate 6s linear -5s infinite;
+}
+.wave_2:before,.wave_2:after{
+	content: "";
+	position: absolute;
+  width: 300rpx;
+	height: 300rpx;
+	margin-top: 190rpx;
+	margin-left: 569rpx;
+	background-color: rgba(223, 151, 68, 0.808);
+	border-radius: 43%;
+	transform: translate(-50%, -70%) rotate(0);
+  animation: rotate 8s linear infinite;
+  z-index: -1;
+}
+.wave_2:after {
+	border-radius: 47%;
+	background-color: rgb(239, 243, 185);
+	transform: translate(-50%, -70%) rotate(0);
+	animation: rotate 20s linear -5s infinite;
+} 
+/* 柱形图 */
+.cylinder1
+{
+  position: absolute;
+  width: 270rpx;
+  height: 500rpx;
+  margin-top: -500rpx;
+  background-color: rgba(233, 59, 224, 0.438);
+  border-radius: 5%;
+  box-shadow: 1rpx -10rpx 15rpx rgba(164, 89, 240, 0.808);
+  z-index: -2;
+}
+.cylinder1 image
+{
+   width: 240rpx;
+   height: 420rpx;
+   margin-top:20rpx ;
+   border-radius: 10%;
+}
+.cylinder2
+{
+  position: absolute;
+  width: 170rpx;
+  height: 400rpx;
+  margin-top: -400rpx;
+  margin-left: -440rpx;
+  background-color: rgba(94, 155, 224, 0.384);
+  border-radius: 5%;
+  box-shadow: 1rpx -10rpx 15rpx rgba(83, 157, 192, 0.808);
+  z-index: -2;
+}
+.cylinder2 image
+{
+   width: 150rpx;
+   height: 320rpx;
+   margin-top:17rpx ;
+   border-radius: 10%;
+}
+.cylinder3
+{
+  position: absolute;
+  width: 170rpx;
+  height: 350rpx;
+  margin-top: -350rpx;
+  margin-left: 450rpx;
+  background-color: rgba(245, 189, 69, 0.493);
+  border-radius: 5%;
+  box-shadow: 1rpx -10rpx 15rpx rgba(240, 150, 32, 0.808);
+  z-index: -2;
+}
+.cylinder3 image
+{
+   width: 150rpx;
+   height: 280rpx;
+   margin-top:15rpx ;
+   border-radius: 10%;
+}
+/* 排行榜内容 */
+.topswiper
+{
+   z-index: 1;
+}
+.chart {
+  height: 500rpx;
+  margin-top: 20rpx;
+}
+.title
+{
+  font-size: 35rpx;
+  line-height: 80rpx;
+}
+.titleimg{
+  height: 50rpx;
+  width: 50rpx;
+}
+.titleimg image{
+  height: 100%;
+  width: 100%;
+}
+.line {
+  height: 50rpx;
+  width: 100%;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  color: rgba(0, 0, 0, 0.671);
+}
+.music_chart {
+  display: flex;
+  height: 100rpx;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10rpx;
+  border-radius: 20%;
+}
+
+.music_chart image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 40rpx;
+  border-radius: 15rpx;
+} 
+.swiperone{
+  margin:8rpx 20rpx;
+  height: 400rpx;
+}
+.count{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 50rpx;
+ text-align:center;
+}
+.music_name
+{
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left:100rpx ;
+  text-align:center;
+  /* 超出隐藏 */
+  overflow:hidden;
+}
+/* 精选榜 */
+.vertical
+{
+  /* border: 1rpx solid #e2e9dc; */
+  position: absolute;
+  margin-top:5rpx ;
+  margin-left: 490rpx;
+  width:32%;
+  height:87%;
+  background-color: rgba(216, 165, 240, 0.568);
+  border-radius: 5%;
+  box-shadow: -15rpx 5rpx 25rpx rgba(29, 29, 28, 0.829);
+  z-index: 1;
+}
+.choiceback
+{
+  /* display: flex; */
+  background-color: rgba(248, 218, 246, 0.144);
+  justify-content: center;
+  margin-top: 0rpx;
+  width: 100%;
+   height: 1200rpx;
+  text-align: center;
+}
+.hor
+{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.horizontal
+{
+  margin-top:2rpx ;
+  margin-left: 15rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 62%;
+  height: 145rpx;
+  border-radius:30rpx;
+  background-color: rgb(255, 255, 255,0.7);
+}
+.horizontal image
+{
+  margin-left: 0rpx;
+  margin-top:1rpx ;
+  border-radius:30rpx;
+   height: 143rpx;
+   width: 97%;
+}
+.black
+{
+  position: absolute;
+  margin-left: 245rpx;
+  margin-top:-930rpx ;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgb(0, 0, 0,0.8);
+}
+.black1
+{
+  position: absolute;
+  margin-top:-780rpx ;
+  margin-left:245rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgb(0, 0, 0,0.8);
+}
+.black2
+{
+  position: absolute;
+  margin-top:-630rpx ;
+  margin-left: 245rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgb(0, 0, 0,0.8);
+}
+.black3
+{
+  position: absolute;
+  margin-top:-480rpx ;
+  margin-left: 245rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.black4
+{
+  position: absolute;
+  margin-top:-330rpx ;
+  margin-left: 245rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgb(0, 0, 0,0.8);
+}
+.black5
+{
+  position: absolute;
+  margin-top:-180rpx ;
+  margin-left: 245rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  width: 32%;
+  height: 55rpx;
+  background-color: rgb(0, 0, 0,0.8);
+}
+.choicetext
+{ position: absolute;
+  margin-left:-50rpx ;
+}
+/* 全球榜 */
+.circleback
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.allcircle
+{
+  position: relative;
+  display: flex;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5rpx -5rpx 5rpx rgb(212, 214, 214);
+  width: 46%;
+  margin:2% 0 0 2% ;
+  border-radius: 10%;
+ text-align: center;
+}
+.allcircle image
+{
+ width: 100%;
+ height: 300rpx;
+ border-radius: 10%;
+}
+.circletext
+{
+ position: absolute;
+  color: rgb(248, 246, 246);
+  width: 100%;
+  left: 10rpx;
+  top: 30rpx;
+  font-family: 宋体;
+}
+.updatetext
+{
+  position: absolute;
+  color: rgb(248, 246, 246);
+  width: 100%;
+  bottom:20rpx;
+  font-family: 宋体;
+}

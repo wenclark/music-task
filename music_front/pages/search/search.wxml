@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<view class="seachview">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="searchInput">
+      <input type="text" placeholder="搜索歌曲" bindinput="searchSong" />
+    </view>
+    <text class="seach">搜索</text>
+  </view>
+  <!-- 搜索内容 -->
+  <block wx:if="{{searchBox.length}}">
+    <view class="searchsong" wx:for="{{searchBox}}" wx:key="id" data-songid="{{item.id}}" bindtap="toSearchsong">
+      <view class="searicon iconfont icon-icon_A"></view>
+      <view class="searinfo">{{item.name}}</view>
+      <view class="searsinger">-{{item.artists[0].name}}</view>
+    </view>
+  </block>
+
+  <!-- 热搜榜 -->
+  <block wx:else="{{searchBox.length}}">
+    <view class="hotsearch">
+      <view class="title"> 热搜榜</view>
+      <view class="hotline">
+        <view class="hotitem" wx:for="{{hotsong}}" wx:key="{{score}}">
+          <text class="order">{{index+1}}</text>
+          <text>{{item.searchWord}}</text>
+          <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" class="iconsong"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

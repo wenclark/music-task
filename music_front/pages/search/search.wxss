@@ -1,0 +1,83 @@
+/* pages/search/search.wxss */
+.header
+{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx;
+}
+.searchInput
+{
+  height: 60rpx;
+  flex: 1;
+  background-color: rgba(218, 212, 212, 0.3);
+  border-radius: 30rpx;
+}
+.searchInput input{
+  margin-top: 4rpx;
+}
+.seach
+{
+  width: 100rpx;
+  text-align: center;
+}
+.searchsong{
+  display: flex;
+  height: 80rpx;
+  width: 95%;
+  margin: auto;
+  border-bottom: 1px solid #dbd3d3 ;
+}
+.searicon{
+  width: 50rpx;
+  width: 50rpx;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+}
+.searinfo{
+  height: 100rpx;
+  line-height: 80rpx;
+  width: auto;
+  font-size: 30rpx;
+}
+.searsinger{
+  height: 100rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: rgb(26, 23, 23);
+}
+/* 热搜榜 */
+.title
+{
+  font-size: 40rpx;
+  margin: 0 15rpx;
+}
+.hotsearch
+{
+  font-size: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1rpx soild #333 ;
+}
+.hotline
+{
+  display: flex;
+  flex-wrap:wrap;
+}
+.hotitem
+{
+  width:50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+.order
+{
+  margin:0 15rpx ;
+}
+.iconsong{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,295 @@
+/* pages/person/person.wxss */
+
+page {
+  height: 100%;
+  width:100%;
+  background-color: rgba(39, 98, 224, 0.116);
+  --registColor: #3f3c3c;
+  --loginColor: #3f3c3c;
+}
+.personalpage{
+  height: 100%;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(18, 17, 19, 0.849),transparent); */
+}
+.personalimage{
+  position:absolute ;
+  height:100%;
+  width: 100%;
+  z-index: -3;
+  
+}
+button::after{
+  border: none;
+}
+.user_background {
+  position: absolute;
+  height: 350rpx;
+  width: 100%;
+  z-index: -2;
+  
+}
+
+.user_background image {
+  height: 100%;
+  width: 100%;
+  border-radius: 100% 100% 100% 100% / 0% 0% 20% 20%;
+}
+
+.user_body {
+  position: absolute;
+  z-index:0;
+  top: 50rpx;
+  width: 100%;
+}
+
+.avatorBox {
+  position: relative;
+  height: 120rpx;
+  width: 120rpx;
+  margin: auto;
+  margin-top: 20rpx;
+  z-index: 2;
+}
+
+.avator {
+  height: 100%;
+  width: 100%;
+  background-color: azure;
+  border-radius: 50%;
+}
+
+.loginBox {
+  position: relative;
+  height: 200rpx;
+  width: 90%;
+  margin: auto;
+  background-color:whitesmoke;
+  top: -60rpx;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+
+}
+
+.loginButton {
+  position: absolute;
+  background-color: transparent;
+  top: 50rpx;
+  left: 40%;
+  color: rgb(34, 33, 33);
+}
+.loginButton::after{
+  border: none;
+}
+
+.menuBox {
+  display: flex;
+  position: relative;
+  height: 160rpx;
+  width: 95%;
+  top: -120rpx;
+  background-color: white;
+  margin: auto;
+  padding: 10rpx;
+  border-radius: 15rpx;
+  justify-content: space-around;
+  color: rgb(90, 88, 88);
+  background-color:whitesmoke ;
+  box-shadow: 10rpx 10rpx 50rpx rgb(82, 82, 81);
+}
+
+.menuitem  {
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 100%;
+  font-size: 20rpx; 
+}
+
+.menuitem text {
+  position: relative;
+  top: -30rpx;
+}
+.menuitem .iconfont{
+  font-size:80rpx ;
+}
+.enter {
+  display: flex;
+  position: absolute;
+  height: 930rpx;
+  width: 95%;
+  z-index: 1;
+  top: 100rpx;
+  left: 2.5%;
+  border-radius: 15rpx;
+  text-align: center;
+  box-shadow: 5rpx 5rpx 40rpx black inset;
+}
+
+.enter-login {
+  height: 100%;
+  width: 98%;
+  background-color: var(--loginColor);
+  border-radius: 15rpx;
+  text-align: center;
+  margin: auto;
+  margin-top: 10rpx;
+  background: rgba(8, 8, 8, 0.2);
+  backdrop-filter: blur(20px);
+  /* border: 1px solid rgb(236, 202, 235); */
+}
+
+.text-login {
+  position: relative;
+  font-size:70rpx;
+  font-family: 宋体;
+  color: rgba(218, 218, 231, 0.973);
+}
+
+.text-close {
+  position: relative;
+  font-size: 70rpx;
+  font-family: 宋体;
+  color: rgba(218, 218, 231, 0.973);
+}
+
+.enter-regist {
+  height:100%;
+  width: 98%;
+  background-color: var(--registColor);
+  border-radius: 15rpx;
+  text-align: center;
+  margin: auto;
+  margin-top: 10rpx;
+  background: rgba(8, 8, 8, 0.2);
+  backdrop-filter: blur(20px);
+  /* border: 1px solid rgb(236, 202, 235); */
+}
+
+.close_icon {
+  position: absolute;
+  height: 60rpx;
+  width: 60rpx;
+  right: 20rpx;
+  top: 20rpx;
+}
+
+.user_icon {
+  position: relative;
+  display: block;
+  height: 80rpx;
+  width: 80rpx;
+  top: 100rpx;
+  left: 70rpx;
+}
+.user{
+  position: absolute;
+  height: 80rpx;
+  width: 60%;
+  right: 50rpx;
+  border-radius: 50rpx;
+  background: rgba(226, 232, 235, 0.87);
+  backdrop-filter: blur(20px);
+  box-shadow:  8rpx 30rpx 8rpx rgba(46, 38, 38, 0.671);
+  top: 180rpx;
+}
+
+
+.password_icon {
+  position: relative;
+  height: 70rpx;
+  width: 70rpx;
+  display: block;
+  left: 80rpx;
+  top: 250rpx;
+}
+.password{
+  position: absolute;
+  height: 80rpx;
+  width: 60%;
+  top: 400rpx;
+  right: 50rpx;
+  background: rgba(226, 232, 235, 0.87);
+  backdrop-filter: blur(20px);
+  box-shadow:  8rpx 30rpx 10rpx rgba(46, 38, 38, 0.671);
+  border-radius: 50rpx;
+
+}
+.text_fenge {
+  position: relative;
+  background-color: rgb(119, 118, 110);
+  height: 2rpx;
+  width: 100%;
+  top: 10rpx;
+}
+
+.toregist {
+  position: absolute;
+  margin-top: 420rpx;
+  margin-left: 50rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  /* background-color: var(--registColor); */
+  color:white;
+}
+
+.tologin {
+  position: absolute;
+  margin-top: 420rpx;
+  margin-left: 50rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  /* background-color: var(--registColor); */
+  color:white;
+}
+
+.login {
+  position: relative;
+  font-size: 30rpx;
+  left: 10rpx;
+  top: 400rpx;
+  background-color:  rgba(226, 232, 235, 0.87);
+  margin: auto;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  
+}
+
+.regist {
+  position: relative;
+  font-size: 30rpx;
+  left: 10rpx;
+  top: 400rpx;
+  background-color:  rgba(226, 232, 235, 0.87);
+  margin: auto;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+}
+
+.menuBox2 {
+  position: relative;
+  height:60%;
+  width: 95%;
+  background-color: rgb(248, 231, 231);
+  margin: auto;
+  /* top: -50rpx; */
+  bottom: -507\rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  opacity: 0.6; 
+  color: rgb(51, 48, 48);
+  box-shadow: 5rpx 5rpx 40rpx black ;
+}
+.list{
+  height: 120rpx;
+  width: 100%;
+  border-bottom: 1px solid rgb(51, 50, 50);
+  line-height: 120rpx;
+}
+.list text{
+  float: right;
+  font-size: 40rpx;
+}
